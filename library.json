@@ -1,6 +1,6 @@
 {
-    "name": "JSP Protothreads",
-    "keywords": "onewire, 1-wire, bus, sensor, temperature",
+    "name": "Jsppt",
+    "keywords": "protothreads, jsp",
     "description": "Jackson Structured Programming DataStreams in combination with Protothreads",
     "repository":
     {
@@ -11,8 +11,8 @@
     [
         {
             "name": "Mikael Karlsson",
-            "url": "https://github.com/karlsson/jsppt",
-        },
+            "url": "https://github.com/karlsson/jsppt"
+        }
     ],
     "dependencies":
     [
@@ -20,6 +20,7 @@
             "protothreads-cpp":"https://github.com/benhoyt/protothreads-cpp.git"
         }
     ],
+    "export":{"include": "*.h"},
     "version": "1.0.0",
     "frameworks": "arduino",
     "platforms": "*"
