@@ -5,7 +5,7 @@
 JSP Protothreads is a data streams implementation for JSP
 (Jackson Structured Programming) together with protothreads. The protothreads
 takes care of what is called "program inversion" in JSP. Basically getting
-out of one process and into another.
+out of one process and into another. Data streams are defined in Jsppt.h.
 
 The implementation relies on the [Platform IO](http://platformio.org/) and
 Arduino platforms but it is quite simple so porting should not be a problem.
@@ -36,6 +36,16 @@ Scheduling is based on data stream events and each data stream need to be
 connected to a Protothread. Check the WiFiScan application in the examples
 directory for how to implement scheduling and to connect DataStreams and
 Protothreads together.
+
+### Making it simpler
+
+If scheduling is done on a per process basis instead of per data stream it is
+possible to simplify things. Timers are bound in the process objects and the
+PT_WAIT_UNTIL() macro, and others, can be used instead.
+I added a SimplePt.h file that implements this instead and the SimpleWiFiScan
+example makes use of it. The Protothread class is also extended to a
+StateProtothread class to get the line number on which the process is waiting.
+This is used in the example scheduler for debug print on state changes.
 
 ### Some notes
 
