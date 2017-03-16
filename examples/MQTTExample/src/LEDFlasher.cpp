@@ -24,7 +24,6 @@ bool LEDFlasher::Run()
         Serial.println("");
         #endif
 
-        // Light the LED longer for stronger RSSIs
         SetLED(true);
         timer.Start(ontime * 10); // ms timer
         PT_WAIT_UNTIL(timer.Expired());

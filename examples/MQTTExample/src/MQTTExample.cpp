@@ -54,9 +54,6 @@ void setup_wifi() {
 
 void setup() {
     Serial.begin(115200);
-    // WiFi.mode(WIFI_STA);
-    // Set WiFi to station mode and disconnect from an AP if it was previously connected
-    // WiFi.disconnect();
     setup_wifi();
     mqttMessenger.SetInDataStream(&mqttPubBuff);
     mqttMessenger.SetOutDataStream(&mqttSubBuff);
