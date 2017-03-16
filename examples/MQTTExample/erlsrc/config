@@ -1,0 +1,35 @@
+% Zotonic site configuration for dalen1.
+[
+    % This site is enabled or not.
+    {enabled, true},
+
+    % Hostname on which this site runs
+    % add to /etc/hosts
+    % {hostname, "192.168.1.8"},
+    {hostname, "dalen1.dev"},
+
+    % Aliases which should redirect to the primary hostname
+    %{hostalias, ["www.example.com", "example.com"]},
+
+    % PostgreSQL database connection
+    {dbhost, ""},
+    {dbport, 0},
+    {dbuser, ""},
+    {dbpassword, "zotonic"},
+    {dbdatabase, ""},
+    {dbschema, "dalen1"},
+
+    % Depcache settings. The maximum size in Mbs
+    {depcache_memory_max, 100},
+
+    % Password for the 'admin' user.
+    {admin_password, "adminadmin"},
+
+    % What skeleton site this site is based on; for installing the initial data.
+    {skeleton, basesite},
+
+    {sign_key, "%%SIGKEY%%"},
+    {sign_key_simple, "mt2bKLk4q7JZ"},
+
+    {title, "A default Zotonic website"}
+].
