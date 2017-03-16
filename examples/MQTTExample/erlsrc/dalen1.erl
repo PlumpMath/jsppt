@@ -4,6 +4,9 @@
 -mod_title("dalen1 zotonic site").
 -mod_description("An empty Zotonic site, to base your site on.").
 -mod_prio(10).
+-mod_depends([
+        mod_mqtt
+]).
 
 -include_lib("zotonic.hrl").
 -include_lib("emqtt/include/emqtt.hrl").
