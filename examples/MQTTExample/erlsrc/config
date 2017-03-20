@@ -11,11 +11,12 @@
     % Aliases which should redirect to the primary hostname
     %{hostalias, ["www.example.com", "example.com"]},
 
-    % PostgreSQL database connection
+    % PostgreSQL database connection - if empty use setting in
+    % $HOME/.zotonic/1/zotonic.config
     {dbhost, ""},
     {dbport, 0},
     {dbuser, ""},
-    {dbpassword, "zotonic"},
+    {dbpassword, ""},
     {dbdatabase, ""},
     {dbschema, "dalen1"},
 
